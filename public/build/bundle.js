@@ -335,28 +335,26 @@ var app = (function () {
     function create_fragment(ctx) {
     	let main;
     	let section;
-    	let h10;
+    	let h1;
     	let t1;
-    	let h11;
+    	let p;
 
     	const block = {
     		c: function create() {
     			main = element("main");
     			section = element("section");
-    			h10 = element("h1");
-    			h10.textContent = "Amethyst";
+    			h1 = element("h1");
+    			h1.textContent = "Amethyst";
     			t1 = space();
-    			h11 = element("h1");
-    			h11.textContent = "Amethyst";
-    			attr_dev(h10, "id", "glo");
-    			attr_dev(h10, "class", "svelte-1xi7u6z");
-    			add_location(h10, file, 4, 8, 58);
-    			attr_dev(h11, "id", "real");
-    			attr_dev(h11, "class", "svelte-1xi7u6z");
-    			add_location(h11, file, 5, 8, 93);
-    			attr_dev(section, "class", "svelte-1xi7u6z");
+    			p = element("p");
+    			p.textContent = "CSS styling made easy";
+    			attr_dev(h1, "class", "svelte-1tt3maf");
+    			add_location(h1, file, 4, 8, 58);
+    			attr_dev(p, "class", "svelte-1tt3maf");
+    			add_location(p, file, 5, 8, 84);
+    			attr_dev(section, "class", "svelte-1tt3maf");
     			add_location(section, file, 3, 4, 40);
-    			attr_dev(main, "class", "svelte-1xi7u6z");
+    			attr_dev(main, "class", "svelte-1tt3maf");
     			add_location(main, file, 2, 0, 29);
     		},
     		l: function claim(nodes) {
@@ -365,9 +363,9 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, section);
-    			append_dev(section, h10);
+    			append_dev(section, h1);
     			append_dev(section, t1);
-    			append_dev(section, h11);
+    			append_dev(section, p);
     		},
     		p: noop,
     		i: noop,
