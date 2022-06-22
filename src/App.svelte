@@ -1,35 +1,33 @@
 <script lang="ts">
+    import LeftMenu from "./comp/ctrlMenus/LeftMenu.svelte";
+    import RightMenu from "./comp/ctrlMenus/RightMenu.svelte";
+    import TopMenu from "./comp/ctrlMenus/TopMenu.svelte";
+    import MainDisplay from "./comp/display/MainDisplay.svelte";
+
+    let leftMenuWidth = 260;
+    const leftMenuWidthChange = (evt:CustomEvent<any>):void => {
+        leftMenuWidth = evt.detail.width;
+    };
+
+    let rightMenuWidth = 360;
+    const rightMenuWidthChange = (evt:CustomEvent<any>):void => {
+        rightMenuWidth = evt.detail.width;
+    };
 </script>
 
 <main>
-    <section>
-        <h1>Amethyst</h1>
-        <p>CSS styling made easy</p>
-    </section>
+   <LeftMenu on:widthChange={leftMenuWidthChange}/> 
+   <TopMenu leftMenuWidth={leftMenuWidth}/> 
+   <RightMenu on:widthChange={rightMenuWidthChange}/>
+
+   <MainDisplay leftMenuWidth={leftMenuWidth} rightMenuWidth={rightMenuWidth}/>
 </main>
 
 <style lang="scss">
-    $accent: hsla(270,100%,50%,100%);
+    @import "../public/global";
 
     main{
-        background-color:hsl(200,5%,8%);
-        display: flex; flex-direction: column; justify-content: center; align-items: center;
-        height:100vh; width:100vw;
-        
-        section{
-            perspective: 175px;
-            position: relative;
-
-            h1{
-                color:hsl(0,0%,95%);
-                font-size: 10em;
-            }
-
-            p{
-                color:hsl(270,90%,70%);
-                font-size: 2em;
-                font-weight: 300;
-            }
-        }
+        width:100vw; height:100vh;
+        z-index: 1;
     }
 </style>

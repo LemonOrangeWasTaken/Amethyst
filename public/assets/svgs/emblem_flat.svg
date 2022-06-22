@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg5"
+   version="1.1"
+   viewBox="0 0 89.138497 70.767494"
+   height="267.46768"
+   width="336.90143"
+   sodipodi:docname="amethyst_simple.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview834"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.0921498"
+     inkscape:cx="169.20395"
+     inkscape:cy="144.82711"
+     inkscape:window-width="2560"
+     inkscape:window-height="1305"
+     inkscape:window-x="3440"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs940">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter1048"
+       x="-0.096870862"
+       y="-0.12201824"
+       width="1.1937417"
+       height="1.2440366">
+      <feGaussianBlur
+         stdDeviation="3.5978848"
+         id="feGaussianBlur1050" />
+    </filter>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-23.163911,-32.38111)" />
+  <path
+     id="path1668"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.389912px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 12.84579,0 0,24.452579 23.305091,70.767486 h 4.803007 L 37.693734,31.530901 37.29837,12.845791 Z" />
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.389912px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 53.743532,70.767462 89.138503,32.392348 79.066032,0.024047 46.697726,10.096514 31.875217,70.767462 Z"
+     id="path1670" />
+</svg>
