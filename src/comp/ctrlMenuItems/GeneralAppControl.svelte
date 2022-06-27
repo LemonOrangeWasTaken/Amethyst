@@ -1,5 +1,9 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
+    import DropdownControl from './GeneralAppControl/DropdownControl.svelte';
+    import RegularControl from './GeneralAppControl/RegularControl.svelte';
+import ZoomControl from './GeneralAppControl/ZoomControl.svelte';
+
     const disp = createEventDispatcher();
 
     let mainContainer:HTMLElement;
@@ -17,25 +21,22 @@
     <img id="pfp" src="./assets/pngs/testpfp.png" alt="">
 
     <!-- export -->
-    <div class="app-ctrl-icons">
-        <img src="./assets/icons/share.svg" alt="">
-    </div>
+    <RegularControl imageURI="./assets/icons/share.svg" alt="Export" />
 
     <!-- check list -->
-    <div class="app-ctrl-icons">
-        <img src="./assets/icons/checkmark-circle-2.svg" alt="">
-    </div>
+    <DropdownControl imageURI="./assets/icons/checkmark-circle-2.svg" alt="Checklist" />
 
     <!-- toggle light & dark mode -->
-    <div class="app-ctrl-icons">
-        <img src="./assets/icons/sun.svg" alt="">
-    </div>
-
+    <RegularControl imageURI="./assets/icons/sun.svg" alt="Toggle dark mode" />
+    
+    <!-- zoom control -->
+    <ZoomControl />
+    
+    <!-- spacer -->
+    <div class="spacer"></div>
+    
     <!-- add elements -->
-    <div class="app-ctrl-icons multi">
-        <img src="./assets/icons/plus.svg" alt="">
-        <img class="more-options" src="./assets/icons/chevron-down.svg" alt="">
-    </div>
+    <DropdownControl imageURI="./assets/icons/plus.svg" alt="Add element" />
 </main>
 
 <!-- STYLE -->
@@ -57,38 +58,14 @@
         #pfp{
             height:32px;
             border-radius: 100px;
-            margin-left: 21px;
+            margin-left: 17px;
         }
 
-        .app-ctrl-icons{
-            height:36px; width:50px;
-            border-radius: 7px;
-            margin-right: 5px;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer;
-            transition: background-color 200ms ease;
-
-            img{
-                filter: invert(1) brightness(0.5);
-                height:24px;
-                transition: filter 200ms ease;
-            }
-
-            &:hover{
-                background-color: hsla(0,0%,100%,10%);
-                img{
-                    filter: invert(1) brightness(0.6);
-                }
-            }
-
-            &.multi{
-                width:65px;  
-                
-                .more-options{
-                    height:20px;
-                    transform: translate3d(2px,0px,0px);
-                }
-            }
+        .spacer{
+            height:100%;
+            width:15px;
         }
+
+
     }
 </style>

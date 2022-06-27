@@ -5,7 +5,8 @@ export interface status{
     saved: boolean,
     autoSavetoCloud: boolean,
     alwaysShowSaveStatus: boolean
-}
+};
+
 export let fileStat = writable<status>({
     name: "Untitled",
     saved: false,

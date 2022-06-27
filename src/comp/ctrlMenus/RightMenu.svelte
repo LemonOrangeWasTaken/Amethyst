@@ -6,14 +6,12 @@
     let currentWidth = 360;
 
     $: if(!!dragSpace){ // as soon as dragSpace is initialized, add the drag event listener for resize
-        const docWidth = document.body.getBoundingClientRect().width;
-
         dragSpace.onmousedown = ():void => { // when dragging
             document.onmousemove = (e:MouseEvent):void => {
                 e.preventDefault();
                 document.body.style.cursor = "col-resize";  // set consistent cursor
-                if(docWidth - e.clientX < 600 && docWidth - e.clientX > 200){
-                    currentWidth = docWidth - e.clientX;
+                if(window.innerWidth - e.clientX < 500 && window.innerWidth - e.clientX > 300){
+                    currentWidth = window.innerWidth - e.clientX;
                     disp("widthChange", {
                         width: currentWidth
                     });                    

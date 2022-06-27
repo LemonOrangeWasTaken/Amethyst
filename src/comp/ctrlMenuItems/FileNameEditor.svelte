@@ -28,8 +28,6 @@
 <main>
     <span type="text" contenteditable=true placeholder="Untitled" on:keypress={preventNewline} on:paste={(e) => e.preventDefault()} bind:this={fileNameField} style="max-width:calc(100vw - {leftMenuWidth}px - {controlSectionWidth}px)">{$fileStat.name}</span>
 
-    <!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
-
     {#if $fileStat.alwaysShowSaveStatus}
         {#if !$fileStat.saved}
             <p>Saving to the cloud...</p>
@@ -66,7 +64,6 @@
             cursor:text;
             padding-right: 15px;
             min-width: 120px;
-            z-index: 2;
 
             &:focus{
                 max-width: calc(100vw - 350px) !important;
