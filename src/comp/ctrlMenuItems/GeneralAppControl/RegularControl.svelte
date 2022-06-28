@@ -23,6 +23,7 @@
             filter: invert(1) brightness(0.5);
             height:24px;
             transition: filter 200ms ease;
+            user-select: none; -webkit-user-select: none; -webkit-user-drag: none;
         }
 
         &:hover{

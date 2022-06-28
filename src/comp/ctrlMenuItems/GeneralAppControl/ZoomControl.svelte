@@ -24,11 +24,11 @@
         display: flex; align-items: center; justify-content: space-between;
 
         p{
-            font-size: 16px;
+            font-size: 15px;
             color: $secondarys4;
             margin-left: 10px;
             font-family: "Inter";
-            font-variation-settings: "wght" 500;
+            font-variation-settings: "wght" 450;
         }    
 
         img{

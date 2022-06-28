@@ -1,12 +1,23 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
-    import DropdownControl from './GeneralAppControl/DropdownControl.svelte';
     import RegularControl from './GeneralAppControl/RegularControl.svelte';
-import ZoomControl from './GeneralAppControl/ZoomControl.svelte';
-
+    import ZoomControl from './GeneralAppControl/ZoomControl.svelte';
     const disp = createEventDispatcher();
+    
+    export let dropdownStatus = {
+        currentID : "",
+        active : false,
+    }
 
     let mainContainer:HTMLElement;
+
+    const toggleDropdown = () => {
+        disp("toggleDropdown");
+    };
+    const updateCurrentID = (evt:CustomEvent<any>) => {
+        disp("updateCurrentID", evt.detail);
+    };
+    
 
     $: if(!!mainContainer){
         disp("widthChange", {
@@ -24,19 +35,16 @@ import ZoomControl from './GeneralAppControl/ZoomControl.svelte';
     <RegularControl imageURI="./assets/icons/share.svg" alt="Export" />
 
     <!-- check list -->
-    <DropdownControl imageURI="./assets/icons/checkmark-circle-2.svg" alt="Checklist" />
+    <RegularControl imageURI="./assets/icons/expand.svg" alt="Checklist" />
 
     <!-- toggle light & dark mode -->
     <RegularControl imageURI="./assets/icons/sun.svg" alt="Toggle dark mode" />
-    
+
+    <!-- spacer -->
+    <div style="width:10px"></div>
+
     <!-- zoom control -->
     <ZoomControl />
-    
-    <!-- spacer -->
-    <div class="spacer"></div>
-    
-    <!-- add elements -->
-    <DropdownControl imageURI="./assets/icons/plus.svg" alt="Add element" />
 </main>
 
 <!-- STYLE -->

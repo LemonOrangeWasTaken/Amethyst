@@ -49,7 +49,7 @@
         height: 100%; width: fit-content;
         background: $primaryl1;
         display: flex; flex-direction: column; justify-content: center;
-        padding-left: 25px;
+        padding-left:4px;
 
         span{
             font-size: 23px;

@@ -62,7 +62,6 @@
         
         &:hover{
             background-color: hsl(0,0%,100%,10%);
-            transition-delay: 500ms
         }
         
         .toggle-element{
@@ -74,11 +73,11 @@
             img{
                 height:20px;
                 margin:0; padding:0;
-                filter: invert(1) brightness(0.7);
+                filter: invert(1) brightness(0.5);
                 user-select: none; -webkit-user-select: none; -webkit-user-drag: none;
             
                 &.selected{
-                    filter: invert(1) brightness(1);
+                    filter: invert(1) brightness(1) !important;
                 }
             }
         }
