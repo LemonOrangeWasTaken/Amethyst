@@ -3,20 +3,128 @@
     export let addMenuItems:menuItem[] = [
         {
             type : "reg",
-            title : "Test",
-            desc : "Hi mom",
+            title : "A",
+            desc : "Anchor Tag",
             cta : () => {}
         },
         {
             type : "reg",
-            title : "public static void main string args",
-            desc : "Based Java",
+            title : "Body",
+            desc : "Document Body",
             cta : () => {}
         },
         {
             type : "reg",
-            title : "No",
-            desc : "I am a motherfucker",
+            title : "Button",
+            desc : "Clickable Button",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Canvas",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Div",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H1",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H2",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H3",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H4",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H5",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "H6",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "HR",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Input",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Label",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Ol",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Ul",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Progress",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "P",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Section",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Span",
+            desc : "",
+            cta : () => {}
+        },
+        {
+            type : "reg",
+            title : "Textarea",
+            desc : "",
             cta : () => {}
         },
     ]
