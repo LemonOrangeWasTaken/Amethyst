@@ -2,14 +2,17 @@
     import { currentView } from "../../stores/viewingMode";
     import MultiToggle, { selection } from "../controls/MultiToggle.svelte";
 
+    const componentUUID = crypto.randomUUID();
     const viewToggleElements:selection[] = [
         {
             iconDir : "./assets/icons/cube.svg",
-            storeIdentifier : "edit",
+            storeVal : "edit",
+            elementID : `${componentUUID}-1`,
             alt : "edit"
         }, {
             iconDir : "./assets/icons/pantone.svg",
-            storeIdentifier : "palette",
+            storeVal : "palette",
+            elementID : `${componentUUID}-2`,
             alt : "palette"
         }
     ]
@@ -18,7 +21,7 @@
 <!-- HTML -->
 <main>
     <a href="https://google.com"><img src="./assets/svgs/emblem_flat.svg" alt=""></a>
-    <MultiToggle elements={viewToggleElements} containerWidth={104} store={currentView}/>
+    <MultiToggle elements={viewToggleElements} containerWidth={104} store={currentView} defaultSelection={0}/>
 </main>
 
 <!-- STYLE -->

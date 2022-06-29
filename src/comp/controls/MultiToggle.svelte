@@ -1,46 +1,51 @@
 <script context="module" lang="ts">
     export interface selection {
         iconDir : string,
-        storeIdentifier : string,
+        storeVal : string,
+        elementID : string,
         alt? : string
     };
 </script>
 
 <script lang="ts">
+    import { onMount } from "svelte";
+
     import type { Writable } from "svelte/store";
 
     export let elements : selection[];
     export let containerWidth : number;
     export let store : Writable<any>;
+    export let defaultSelection : number;
 
     let containerElement:HTMLElement;
-    let correspondedElement:HTMLDivElement;
+    let selectedElementID:string;
     let selector:HTMLDivElement;
 
-    $: if(!!correspondedElement){
+    $: if(!!selectedElementID){
         // calculate the positional difference, and set translate3d for the selector (the purple highlight)
-        const posDiff = correspondedElement.getBoundingClientRect().x - containerElement.getBoundingClientRect().x;
+        const posDiff = document.getElementById(selectedElementID).getBoundingClientRect().x - containerElement.getBoundingClientRect().x;
         selector.style.transform = `translate3d(${posDiff}px, 0, 0)`;
     };
 
-    const updateView = (storeIdentifier:string):void => {
-        $store = storeIdentifier;
+    const updateView = (storeVal:string, elementID:string):void => {
+        $store = storeVal;
+        selectedElementID = elementID;
     };
+
+    // when initialized, set selectedElementID to the index speciied by defaultSelection
+    onMount(():void => {
+        $store = elements[defaultSelection].storeVal;
+        selectedElementID = elements[defaultSelection].elementID;
+    })
 </script>
 
  <!--HTML -->
 <main style="width: {containerWidth}px" bind:this={containerElement}>
     {#each elements as ele}
-        {#if $store === ele.storeIdentifier} 
-            <!-- if the current element corresponds to the store -->
-            <div class="toggle-element" bind:this={correspondedElement} style="width:{containerWidth / elements.length}px">
-                <img src={ele.iconDir} alt={ele.alt} class="selected">
-            </div>
-        {:else}
-            <div class="toggle-element" style="width:{containerWidth / elements.length}px" on:click={() => updateView(ele.storeIdentifier)}>
-                <img src={ele.iconDir} alt={ele.alt}>
-            </div>
-        {/if}
+        <!-- use elementID to uniquely identify each choice -->
+        <div class="toggle-element" id={ele.elementID} style="width:{containerWidth / elements.length}px" on:click={() => updateView(ele.storeVal, ele.elementID)}>
+            <img src={ele.iconDir} alt={ele.alt} class={selectedElementID === ele.elementID ? "selected" : ""}>
+        </div>
     {/each}
 
     <!-- the selector -->
@@ -75,6 +80,7 @@
                 margin:0; padding:0;
                 filter: invert(1) brightness(0.5);
                 user-select: none; -webkit-user-select: none; -webkit-user-drag: none;
+                transition: filter 100ms ease;
             
                 &.selected{
                     filter: invert(1) brightness(1) !important;

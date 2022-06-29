@@ -34,6 +34,10 @@
             }
         }
 
+        p{
+            user-select: none; -webkit-user-select: none;
+        }
+
         #title{
             color:$secondarys4;
             font-size: 13px;

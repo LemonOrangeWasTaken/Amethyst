@@ -11,7 +11,7 @@
             type : "reg",
             title : "public static void main string args",
             desc : "Based Java",
-            cta : () => {alert("fuck")}
+            cta : () => {}
         },
         {
             type : "reg",
