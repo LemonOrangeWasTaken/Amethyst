@@ -1,5 +1,6 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
+    import CollectionViewer from '../ctrlMenuItems/CollectionViewer.svelte';
     import ViewSwitcher from '../ctrlMenuItems/ViewSwitcher.svelte';
     const disp = createEventDispatcher();
 
@@ -29,6 +30,9 @@
 <!-- HTML -->
 <main style="width: {currentWidth}px">
     <ViewSwitcher />
+
+    <!-- collection viewing system -->
+    <CollectionViewer containerWidth={currentWidth}/>
 
     <!-- resize trigger -->
     <div bind:this={dragSpace} id="drag-space"></div>

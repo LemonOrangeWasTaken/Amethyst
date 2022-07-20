@@ -1,130 +1,149 @@
 <script lang="ts" context="module">
+    import { HTMltagInfo } from "../../stores/collection";
+
     // define menus here so we can edit them from outside of this component
     export let addMenuItems:menuItem[] = [
-        {
+        { // div
             type : "reg",
-            title : "A",
-            desc : "Anchor Tag",
+            title : HTMltagInfo["DIV"].name,
+            iconSrc : HTMltagInfo["DIV"].iconURI,
+            desc: "<div>",
             cta : () => {}
-        },
-        {
+        },{ // section
             type : "reg",
-            title : "Body",
-            desc : "Document Body",
+            title : HTMltagInfo["SECTION"].name,
+            iconSrc : HTMltagInfo["SECTION"].iconURI,
+            desc: "<section>",
             cta : () => {}
-        },
-        {
+        },{ // span
             type : "reg",
-            title : "Button",
-            desc : "Clickable Button",
+            title : HTMltagInfo["SPAN"].name,
+            iconSrc : HTMltagInfo["SPAN"].iconURI,
+            desc: "<span>",
             cta : () => {}
-        },
-        {
+        },{ // body
             type : "reg",
-            title : "Canvas",
-            desc : "",
+            title : HTMltagInfo["BODY"].name,
+            iconSrc : HTMltagInfo["BODY"].iconURI,
+            desc: "<body>",
             cta : () => {}
-        },
-        {
+        },{ // canvas
             type : "reg",
-            title : "Div",
-            desc : "",
+            title : HTMltagInfo["CANVAS"].name,
+            iconSrc : HTMltagInfo["CANVAS"].iconURI,
+            desc: "<canvas>",
             cta : () => {}
-        },
-        {
-            type : "reg",
-            title : "H1",
-            desc : "",
+        },{ // ==========
+            type : "sep",
+            title : "",
             cta : () => {}
-        },
-        {
+        },{ // h1
             type : "reg",
-            title : "H2",
-            desc : "",
+            title : HTMltagInfo["H1"].name,
+            iconSrc : HTMltagInfo["H1"].iconURI,
+            desc: "<h1>",
             cta : () => {}
-        },
-        {
+        },{ // h2
             type : "reg",
-            title : "H3",
-            desc : "",
+            title : HTMltagInfo["H2"].name,
+            iconSrc : HTMltagInfo["H2"].iconURI,
+            desc: "<h2>",
             cta : () => {}
-        },
-        {
+        },{ // h3
             type : "reg",
-            title : "H4",
-            desc : "",
+            title : HTMltagInfo["H3"].name,
+            iconSrc : HTMltagInfo["H3"].iconURI,
+            desc: "<h3>",
             cta : () => {}
-        },
-        {
+        },{ // h4
             type : "reg",
-            title : "H5",
-            desc : "",
+            title : HTMltagInfo["H4"].name,
+            iconSrc : HTMltagInfo["H4"].iconURI,
+            desc: "<h4>",
             cta : () => {}
-        },
-        {
+        },{ // h5
             type : "reg",
-            title : "H6",
-            desc : "",
+            title : HTMltagInfo["H5"].name,
+            iconSrc : HTMltagInfo["H5"].iconURI,
+            desc: "<h5>",
             cta : () => {}
-        },
-        {
+        },{ // h6
             type : "reg",
-            title : "HR",
-            desc : "",
+            title : HTMltagInfo["H6"].name,
+            iconSrc : HTMltagInfo["H6"].iconURI,
+            desc: "<h6>",
             cta : () => {}
-        },
-        {
+        },{ // paragraph
             type : "reg",
-            title : "Input",
-            desc : "",
+            title : HTMltagInfo["P"].name,
+            iconSrc : HTMltagInfo["P"].iconURI,
+            desc: "<p>",
             cta : () => {}
-        },
-        {
+        },{ // anchor
             type : "reg",
-            title : "Label",
-            desc : "",
+            title : HTMltagInfo["A"].name,
+            iconSrc : HTMltagInfo["A"].iconURI,
+            desc: "<a>",
             cta : () => {}
-        },
-        {
-            type : "reg",
-            title : "Ol",
-            desc : "",
+        },{ // ==========
+            type : "sep",
+            title : "",
             cta : () => {}
-        },
-        {
+        },{ // button
             type : "reg",
-            title : "Ul",
-            desc : "",
+            title : HTMltagInfo["BUTTON"].name,
+            iconSrc : HTMltagInfo["BUTTON"].iconURI,
+            desc: "<button>",
             cta : () => {}
-        },
-        {
+        },{ // input
             type : "reg",
-            title : "Progress",
-            desc : "",
+            title : HTMltagInfo["INPUT"].name,
+            iconSrc : HTMltagInfo["INPUT"].iconURI,
+            desc: "<input>",
             cta : () => {}
-        },
-        {
+        },{ // textarea
             type : "reg",
-            title : "P",
-            desc : "",
+            title : HTMltagInfo["TEXTAREA"].name,
+            iconSrc : HTMltagInfo["TEXTAREA"].iconURI,
+            desc: "<textarea>",
             cta : () => {}
-        },
-        {
+        },{ // label
             type : "reg",
-            title : "Section",
-            desc : "",
+            title : HTMltagInfo["LABEL"].name,
+            iconSrc : HTMltagInfo["LABEL"].iconURI,
+            desc: "<label>",
             cta : () => {}
-        },
-        {
-            type : "reg",
-            title : "Span",
-            desc : "",
+        },{ // ==========
+            type : "sep",
+            title : "",
             cta : () => {}
-        },
-        {
+        },{ // ol
             type : "reg",
-            title : "Textarea",
-            desc : "",
+            title : HTMltagInfo["OL"].name,
+            iconSrc : HTMltagInfo["OL"].iconURI,
+            desc: "<ol>",
+            cta : () => {}
+        },{ // ul
+            type : "reg",
+            title : HTMltagInfo["UL"].name,
+            iconSrc : HTMltagInfo["UL"].iconURI,
+            desc: "<ul>",
+            cta : () => {}
+        },{ // ==========
+            type : "sep",
+            title : "",
+            cta : () => {}
+        },{ // hr
+            type : "reg",
+            title : HTMltagInfo["HR"].name,
+            iconSrc : HTMltagInfo["HR"].iconURI,
+            desc: "<hr>",
+            cta : () => {}
+        },{ // progress
+            type : "reg",
+            title : HTMltagInfo["PROGRESS"].name,
+            iconSrc : HTMltagInfo["PROGRESS"].iconURI,
+            desc: "<progress>",
             cta : () => {}
         },
     ]
@@ -143,8 +162,8 @@
 
     // dropdown control stuff
     let dropdownStatus = {
-        currentID : "addElement",
-        active : true,
+        currentID : "",
+        active : false,
     }
     const toggleDropdown = () => {
         dropdownStatus.active = !dropdownStatus.active;

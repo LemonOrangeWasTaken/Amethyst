@@ -37,11 +37,11 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="43.52079"
-     inkscape:cx="7.3642964"
-     inkscape:cy="12.453818"
-     inkscape:window-width="2560"
-     inkscape:window-height="1305"
-     inkscape:window-x="3440"
+     inkscape:cx="11.856402"
+     inkscape:cy="11.580672"
+     inkscape:window-width="1720"
+     inkscape:window-height="1387"
+     inkscape:window-x="1720"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="g834" />
@@ -56,15 +56,15 @@
        id="rect824"
        x="0"
        y="-24"
-       style="stroke:#000000;stroke-width:1.45795321;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 6.5919847,5.7342012 -5.191525,6.2639998 5.06833,6.372423"
+       style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 6.441489,5.7342012 -5.191525,6.2639998 5.06833,6.372423"
        id="path978"
        sodipodi:nodetypes="ccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 17.636296,5.717865 4.963244,6.280336 -5.166164,6.25807"
+       style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 17.786792,5.717865 4.963244,6.280336 -5.166164,6.25807"
        id="path1476"
        sodipodi:nodetypes="ccc" />
   </g>

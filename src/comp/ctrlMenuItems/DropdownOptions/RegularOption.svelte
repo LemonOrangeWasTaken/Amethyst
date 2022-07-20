@@ -5,7 +5,16 @@
 </script>
 
 <main title={options.title} on:mouseup={options.cta}>
-    <p id="title">{options.title}</p>
+    <section>
+        <!-- icons -->
+        {#if !!options.iconSrc}
+            <img src={options.iconSrc} width=15px height=15px/>
+        {/if}
+        <!-- title -->
+        <p id="title">{options.title}</p>
+
+    </section>
+
     <!-- description -->
     {#if !!options.desc}
         <p id="desc">{options.desc}</p>
@@ -26,30 +35,45 @@
         &:hover{
             background-color: $accent;
 
-            #title{
-                color: $secondary
-            }
             #desc{
                 color: $secondarys2
             }
+
+            section{
+                img{
+                    filter: invert(1) brightness(1) !important;
+                }
+                #title{
+                    color: $secondary
+                }
+            }
         }
 
-        p{
-            user-select: none; -webkit-user-select: none;
-        }
+        section{
+            display: flex; align-items: center;
 
-        #title{
-            color:$secondarys4;
-            font-size: 13px;
-            margin: 0px 7px 0px 7px;
-            white-space: nowrap;
-            font-variation-settings: "wght" 450;
+            img{
+                filter: invert(1) brightness(0.7) !important;
+                margin: 0px 0px 0px 7px;
+            }
+
+            p{
+                user-select: none; -webkit-user-select: none;
+            }
+
+            #title{
+                color:$secondarys4;
+                font-size: 13px;
+                margin: 0px 7px 0px 11px;
+                white-space: nowrap;
+                font-variation-settings: "wght" 450;
+            }
         }
 
         #desc{
             color:$secondarys6;
             font-size: 13px;
-            margin: 0px 7px 0px 50px;
+            margin: 0px 7px 0px 75px;
             white-space: nowrap;    
         }
     }

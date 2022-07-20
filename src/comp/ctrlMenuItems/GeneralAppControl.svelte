@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { createEventDispatcher } from 'svelte';
-    import RegularControl from './GeneralAppControl/RegularControl.svelte';
-    import ZoomControl from './GeneralAppControl/ZoomControl.svelte';
+    import { createEventDispatcher } from "svelte";
+    import RegularControl from "./GeneralAppControl/RegularControl.svelte";
+    import ZoomControl from "./GeneralAppControl/ZoomControl.svelte";
     const disp = createEventDispatcher();
     
     export let dropdownStatus = {
